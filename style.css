@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Showdex;
+  src: url(fonts/Showdex.otf);
+}
+
+body {
+  font-family: Showdex;
+  font-size: 72pt;
+  color: red;
+}
+
+main {
+  width: 100dvw;
+  height: 100dvh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
