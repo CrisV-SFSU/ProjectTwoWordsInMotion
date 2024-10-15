@@ -33,13 +33,13 @@ a {
 /* Text Effects */
 .wide-letters {
   -webkit-animation: 3s ease 10s normal forwards 1 wideLetters;
-  animation: 3s ease 10s normal forwards 1 wideLetters;
+  animation: 3s ease 5s normal forwards 1 wideLetters;
 }
 
 .falling-words {
   -webkit-animation: 10s ease 7s normal forwards 1 fallingWords;
 
-  animation: 5s ease 7s normal forwards 1 fallingWords;
+  animation: 3s ease-in 7s normal forwards 1 fallingWords;
 }
 
 /* Scaling As Needed */
@@ -57,8 +57,8 @@ a {
 
 .bottom-right {
   position: absolute;
-  bottom: 5%;
-  right: 5%;
+  bottom: 15%;
+  right: 10%;
 }
 
 .nudge-up {
@@ -74,7 +74,7 @@ a {
 .fall {
   position: absolute;
   top: 28%;
-  left: 81%;
+  left: 74%;
 }
 
 /* Animations */
@@ -84,34 +84,34 @@ a {
   animation: 3s ease 5s normal forwards 1 growText;
 }
 
+.fade-in-1s {
+  -webkit-animation: 1s ease 0s normal forwards 1 fadeIn;
+  animation: 1s ease 0s normal forwards 1 fadeIn;
+}
+
 .fade-in-3s {
   -webkit-animation: 3s ease 0s normal forwards 1 fadeIn;
   animation: 3s ease 0s normal forwards 1 fadeIn;
 }
 
-.fade-in-8s {
-  -webkit-animation: 8s ease 0s normal forwards 1 fadeIn;
-  animation: 8s ease 0s normal forwards 1 fadeIn;
+.fade-in-5s {
+  -webkit-animation: 5s ease 0s normal forwards 1 fadeIn;
+  animation: 5s ease 0s normal forwards 1 fadeIn;
 }
 
-.fade-in-13s {
-  -webkit-animation: 13s ease 0s normal forwards 1 fadeIn;
-  animation: 13s ease 0s normal forwards 1 fadeIn;
+.fade-in-7s {
+  -webkit-animation: 7s ease 0s normal forwards 1 fadeIn;
+  animation: 7s ease 0s normal forwards 1 fadeIn;
 }
 
-.fade-in-17s {
-  -webkit-animation: 17s ease 0s normal forwards 1 fadeIn;
-  animation: 17s ease 0s normal forwards 1 fadeIn;
+.fade-in-9s {
+  -webkit-animation: 7s ease 0s normal forwards 1 fadeIn;
+  animation: 9s ease 0s normal forwards 1 fadeIn;
 }
 
-.fade-in-8s-with-scale {
-  -webkit-animation: 8s ease 0s normal forwards 1 fadeInScaleTall;
-  animation: 8s ease 0s normal forwards 1 fadeInScaleTall;
-}
-
-.peek-in-right {
-  -webkit-animation: 13s ease 0s normal forwards 1 peekInRight;
-  animation: 13s ease 0s normal forwards 1 peekInRight;
+.fade-in-5s-with-scale {
+  -webkit-animation: 5s ease 0s normal forwards 1 fadeInScaleTall;
+  animation: 5s ease 0s normal forwards 1 fadeInScaleTall;
 }
 
 .fade-in-13s-with-scale {
@@ -119,14 +119,9 @@ a {
   animation: 13s ease 0s normal forwards 1 fadeInScale;
 }
 
-@-webkit-keyframes wideLetters {
-  0% {
-    letter-spacing: normal;
-  }
-
-  100% {
-    letter-spacing: 4rem;
-  }
+.peek-in-right {
+  -webkit-animation: 13s ease 0s normal forwards 1 peekInRight;
+  animation: 3s ease 0s normal forwards 1 peekInRight;
 }
 
 @keyframes wideLetters {
@@ -136,16 +131,6 @@ a {
 
   100% {
     letter-spacing: 4rem;
-  }
-}
-
-@-webkit-keyframes fallingWords {
-  0% {
-    transform: translate();
-  }
-
-  100% {
-    transform: translate(60px, 1000px) rotate(120deg);
   }
 }
 
@@ -159,16 +144,6 @@ a {
   }
 }
 
-@-webkit-keyframes peekInRight {
-  0% {
-    transform: translateX(2000px);
-  }
-
-  100% {
-    transform: translateX(850px);
-  }
-}
-
 @keyframes peekInRight {
   0% {
     transform: translateX(2000px);
@@ -176,18 +151,6 @@ a {
 
   100% {
     transform: translateX(850px);
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -200,20 +163,6 @@ a {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-100px) translateY(-100px) scale(4);
   }
 }
 
@@ -231,20 +180,6 @@ a {
   }
 }
 
-@-webkit-keyframes fadeInScaleTall {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: scale(4);
-  }
-}
-
 @keyframes fadeInScaleTall {
   0% {
     opacity: 0;
@@ -255,6 +190,6 @@ a {
   }
   100% {
     opacity: 1;
-    transform: scale(4);
+    transform: scaleX(4) scaleY(6);
   }
 }
