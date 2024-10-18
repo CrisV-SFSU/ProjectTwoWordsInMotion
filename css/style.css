@@ -28,19 +28,9 @@ main {
 
 a {
   color: red;
+  text-decoration: none;
 }
 
-/* Text Effects */
-.wide-letters {
-  -webkit-animation: 3s ease 10s normal forwards 1 wideLetters;
-  animation: 3s ease 5s normal forwards 1 wideLetters;
-}
-
-.falling-words {
-  -webkit-animation: 10s ease 7s normal forwards 1 fallingWords;
-
-  animation: 3s ease-in 7s normal forwards 1 fallingWords;
-}
 
 /* Scaling As Needed */
 
@@ -68,7 +58,7 @@ a {
 
 .nudge-down {
   position: absolute;
-  bottom: 10%;
+  bottom: 2%;
 }
 
 .fall {
@@ -85,50 +75,70 @@ a {
 }
 
 .fade-in-1s {
-  -webkit-animation: 1s ease 0s normal forwards 1 fadeIn;
-  animation: 1s ease 0s normal forwards 1 fadeIn;
+  animation: 0.8s ease 0s normal forwards 1 fadeIn;
 }
 
 .fade-in-3s {
-  -webkit-animation: 3s ease 0s normal forwards 1 fadeIn;
-  animation: 3s ease 0s normal forwards 1 fadeIn;
+  animation: 1.8s ease 0s normal forwards 1 fadeIn;
 }
 
 .fade-in-5s {
-  -webkit-animation: 5s ease 0s normal forwards 1 fadeIn;
-  animation: 5s ease 0s normal forwards 1 fadeIn;
+  animation: 2.8s ease 0s normal forwards 1 fadeIn;
 }
 
 .fade-in-7s {
-  -webkit-animation: 7s ease 0s normal forwards 1 fadeIn;
-  animation: 7s ease 0s normal forwards 1 fadeIn;
+  animation: 3.8s ease 0s normal forwards 1 fadeIn;
 }
 
 .fade-in-9s {
-  -webkit-animation: 7s ease 0s normal forwards 1 fadeIn;
+  animation: 4.9s ease 0s normal forwards 1 fadeIn;
+}
+
+.fade-in-12s {
+  animation: 7s ease 0s normal forwards 1 fadeIn;
+}
+
+.fade-in-15s {
   animation: 9s ease 0s normal forwards 1 fadeIn;
 }
 
-.fade-in-5s-with-scale {
-  -webkit-animation: 5s ease 0s normal forwards 1 fadeInScaleTall;
-  animation: 5s ease 0s normal forwards 1 fadeInScaleTall;
+.scale-4x {
+  animation: 3.5s ease 2.5s normal forwards 1 scale4x;
 }
 
-.fade-in-13s-with-scale {
-  -webkit-animation: 13s ease 0s normal forwards 1 fadeInScale;
-  animation: 13s ease 0s normal forwards 1 fadeInScale;
+.scale-tall {
+  animation: 3.5s ease 2.5s normal forwards 1 scaleTall;
 }
 
 .peek-in-right {
-  -webkit-animation: 13s ease 0s normal forwards 1 peekInRight;
-  animation: 3s ease 0s normal forwards 1 peekInRight;
+  animation: 2.4s ease 0s normal forwards 1 peekInRight;
 }
+
+.link-glow {
+  animation: 3s ease-in 10s infinite reverse both running linkGlow;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* Text Effects */
+
+.wide-letters {
+  -webkit-animation: 3s ease 10s normal forwards 1 wideLetters;
+  animation: 3s ease 5s normal forwards 1 wideLetters;
+}
+
+.falling-words {
+  -webkit-animation: 10s ease 7s normal forwards 1 fallingWords;
+
+  animation: 2s ease-in 4s normal forwards 1 fallingWords;
+}
+
 
 @keyframes wideLetters {
   0% {
     letter-spacing: normal;
   }
-
+  
   100% {
     letter-spacing: 4rem;
   }
@@ -138,7 +148,7 @@ a {
   0% {
     transform: translate();
   }
-
+  
   100% {
     transform: translate(60px, 1000px) rotate(120deg);
   }
@@ -146,11 +156,12 @@ a {
 
 @keyframes peekInRight {
   0% {
-    transform: translateX(2000px);
+    transform: translateX(2000px) rotate(0deg);
   }
 
   100% {
-    transform: translateX(850px);
+    transform: translateX(850px) rotate(-36deg);
+
   }
 }
 
@@ -166,30 +177,44 @@ a {
   }
 }
 
-@keyframes fadeInScale {
+@keyframes scale4x {
   0% {
-    opacity: 0;
     transform: scale(1);
   }
-  66% {
-    opacity: 0;
-  }
+
   100% {
-    opacity: 1;
-    transform: translateX(-100px) translateY(-100px) scale(4);
+    transform: scale(4);
   }
 }
 
-@keyframes fadeInScaleTall {
+@keyframes scaleTall {
   0% {
-    opacity: 0;
     transform: scale(1);
   }
-  66% {
-    opacity: 0;
-  }
+
   100% {
-    opacity: 1;
     transform: scaleX(4) scaleY(6);
   }
 }
+
+@keyframes linkGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgb(243, 88, 88);
+}
+70% {
+    box-shadow: 0 0 10px 2px rgb(243, 88, 88);
+}
+100% {
+    box-shadow: 0 0 10px 2px rgb(243, 88, 88);
+}
+}
+
+/* 
+Feedback:
+
+  Animation speed can snappier. 
+  Max time is like 3s
+
+  No underline as visual cue. Can we 
+  have a glow behind as a visual cue?
+*/

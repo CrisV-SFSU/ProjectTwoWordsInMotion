@@ -3,8 +3,7 @@
 by Cristian Vasquez
 
 # Project Overview
-For this project, I was tasked to create an animated experience using purely text.
-The text chosen had to speak to our own views on community.
+I decided to create an animated experience based on a text that that showcased what community meant to me.
 
 For my chosen text, I selected these lyrics from Skid Row's "Youth Gone Wild":
 
@@ -35,3 +34,9 @@ The languages used are HTML & CSS.
 For the animations, I primarily used @keyframes to get more control over my animations & timing. The animations are also quick, ranging from 1 second to 9 seconds primarily. 
 
 All of the animations are stored in specific CSS classes that are applied to div elements in the HTML. This was to give me more control over animating different parts of the text. 
+
+# Acknowledgements
+
+Song: "Youth Gone Wild" by Skid Row 
+
+Typeface: "Showdex" by Syafrizal a.k.a. Khurasan (https://www.dafont.com/showdex.font)
